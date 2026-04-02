@@ -153,4 +153,14 @@ Misc:AddButton({
     end
 })
 
+-- SERVER HOP
+Misc:AddButton({
+    Name = "Server Hop",
+    Callback = function()
+        local ts = game:GetService("TeleportService")
+        local p = game.Players.LocalPlayer
+        ts:Teleport(game.PlaceId, p)
+    end
+})
+
 OrionLib:Init()
