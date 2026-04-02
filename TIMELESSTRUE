@@ -6,18 +6,6 @@ local Window = OrionLib:MakeWindow({
     SaveConfig = false
 })
 
-local function tp(x,y,z)
-    local c = game.Players.LocalPlayer.Character
-    if c and c:FindFirstChild("HumanoidRootPart") then
-        local hrp = c.HumanoidRootPart
-        for i = 1,5 do
-            hrp.CFrame = CFrame.new(x,y + (i * 2),z)
-            task.wait(0.05)
-        end
-        hrp.CFrame = CFrame.new(x,y,z)
-    end
-end
-
 -- HOME
 local Home = Window:MakeTab({
     Name = "Home",
@@ -34,6 +22,12 @@ Home:AddButton({
                 v:Destroy()
             end
         end
+
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+            Title = "Notification",
+            Text = "Deletion Enabled",
+            Duration = 3
+        })
     end
 })
 
@@ -45,32 +39,62 @@ local Gamepass = Window:MakeTab({
 
 Gamepass:AddButton({
     Name = "SolemnLament Frisk",
-    Callback = function() tp(-6273.007, 294.979, 7625.445) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6273.007, 294.979, 7625.445)
+        end
+    end
 })
 
 Gamepass:AddButton({
     Name = "SolemnLament Chara",
-    Callback = function() tp(-6273.712, 295.024, 7648.504) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6273.712, 295.024, 7648.504)
+        end
+    end
 })
 
 Gamepass:AddButton({
     Name = "SolemnLament Sans",
-    Callback = function() tp(-6272.947, 295.062, 7604.625) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6272.947, 295.062, 7604.625)
+        end
+    end
 })
 
 Gamepass:AddButton({
     Name = "AZURE SHADOW SANS",
-    Callback = function() tp(-6482.826, 294.934, 7803.398) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6482.826, 294.934, 7803.398)
+        end
+    end
 })
 
 Gamepass:AddButton({
     Name = "SMILE SANS",
-    Callback = function() tp(-6481.947, 294.972, 7779.182) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6481.947, 294.972, 7779.182)
+        end
+    end
 })
 
 Gamepass:AddButton({
     Name = "SMILE CHARA",
-    Callback = function() tp(-6481.981, 294.801, 7754.495) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6481.981, 294.801, 7754.495)
+        end
+    end
 })
 
 -- LOBBY
@@ -81,17 +105,32 @@ local Lobby = Window:MakeTab({
 
 Lobby:AddButton({
     Name = "Lobby",
-    Callback = function() tp(-2927.306, 137.193, 6017.123) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-2927.306, 137.193, 6017.123)
+        end
+    end
 })
 
 Lobby:AddButton({
     Name = "Character",
-    Callback = function() tp(-6021.257, 323.145, 6562.482) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6021.257, 323.145, 6562.482)
+        end
+    end
 })
 
 Lobby:AddButton({
     Name = "Gamepass",
-    Callback = function() tp(-6323.915, 293.989, 7777.009) end
+    Callback = function()
+        local c = game.Players.LocalPlayer.Character
+        if c and c:FindFirstChild("HumanoidRootPart") then
+            c.HumanoidRootPart.CFrame = CFrame.new(-6323.915, 293.989, 7777.009)
+        end
+    end
 })
 
 Lobby:AddLabel("These are the lobbies available in the game")
