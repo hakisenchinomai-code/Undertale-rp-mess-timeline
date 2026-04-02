@@ -133,8 +133,6 @@ Lobby:AddButton({
     end
 })
 
-Lobby:AddLabel("These are the lobbies available in the game")
-
 -- MISC
 local Misc = Window:MakeTab({
     Name = "Misc",
