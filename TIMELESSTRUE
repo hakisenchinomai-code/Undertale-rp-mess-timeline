@@ -1,9 +1,17 @@
-local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/jensonhirst/Orion/main/source'))()
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Articles-Hub/ROBLOXScript/refs/heads/main/Library/Orion/Source.lua'))()
 
-local Window = OrionLib:MakeWindow({Name = "Undertale Rp Mess Timeline"})
+local Window = OrionLib:MakeWindow({
+    Name = "Undertale Rp Mess Timeline",
+    HidePremium = false,
+    SaveConfig = false
+})
 
 -- HOME
-local Home = Window:MakeTab({Name = "Home"})
+local Home = Window:MakeTab({
+    Name = "Home",
+    Icon = "rbxassetid://4483345998"
+})
+
 Home:AddLabel("By timelesstrue")
 
 Home:AddButton({
@@ -18,8 +26,13 @@ Home:AddButton({
 })
 
 -- GAMEPASS
-local Gamepass = Window:MakeTab({Name = "Gamepass"})
+local Gamepass = Window:MakeTab({
+    Name = "Gamepass",
+    Icon = "rbxassetid://6031094678"
+})
+
 Gamepass:AddLabel("Gamepass")
+Gamepass:AddLabel("I can only help you teleport to gamepasses and delete boxes. When teleporting to a gamepass, there is a small chance you will survive with 1 HP.")
 
 Gamepass:AddButton({
     Name = "SolemnLament Frisk",
@@ -82,7 +95,10 @@ Gamepass:AddButton({
 })
 
 -- LOBBY
-local Lobby = Window:MakeTab({Name = "Lobby"})
+local Lobby = Window:MakeTab({
+    Name = "Lobby",
+    Icon = "rbxassetid://3926305904"
+})
 
 Lobby:AddButton({
     Name = "Lobby",
@@ -117,7 +133,10 @@ Lobby:AddButton({
 Lobby:AddLabel("These are the lobbies available in the game")
 
 -- MISC
-local Misc = Window:MakeTab({Name = "Misc"})
+local Misc = Window:MakeTab({
+    Name = "Misc",
+    Icon = "rbxassetid://6031280882"
+})
 
 Misc:AddButton({
     Name = "Infinite Yield",
