@@ -6,6 +6,18 @@ local Window = OrionLib:MakeWindow({
     SaveConfig = false
 })
 
+local function tp(x,y,z)
+    local c = game.Players.LocalPlayer.Character
+    if c and c:FindFirstChild("HumanoidRootPart") then
+        local hrp = c.HumanoidRootPart
+        for i = 1,5 do
+            hrp.CFrame = CFrame.new(x,y + (i * 2),z)
+            task.wait(0.05)
+        end
+        hrp.CFrame = CFrame.new(x,y,z)
+    end
+end
+
 -- HOME
 local Home = Window:MakeTab({
     Name = "Home",
@@ -31,67 +43,34 @@ local Gamepass = Window:MakeTab({
     Icon = "rbxassetid://6031094678"
 })
 
-Gamepass:AddLabel("Gamepass")
-Gamepass:AddLabel("I can only help you teleport to gamepasses and delete boxes. When teleporting to a gamepass, there is a small chance you will survive with 1 HP.")
-
 Gamepass:AddButton({
     Name = "SolemnLament Frisk",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6273.007, 294.979, 7625.445)
-        end
-    end
+    Callback = function() tp(-6273.007, 294.979, 7625.445) end
 })
 
 Gamepass:AddButton({
     Name = "SolemnLament Chara",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6273.712, 295.024, 7648.504)
-        end
-    end
+    Callback = function() tp(-6273.712, 295.024, 7648.504) end
 })
 
 Gamepass:AddButton({
     Name = "SolemnLament Sans",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6272.947, 295.062, 7604.625)
-        end
-    end
+    Callback = function() tp(-6272.947, 295.062, 7604.625) end
 })
 
 Gamepass:AddButton({
     Name = "AZURE SHADOW SANS",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6482.826, 294.934, 7803.398)
-        end
-    end
+    Callback = function() tp(-6482.826, 294.934, 7803.398) end
 })
 
 Gamepass:AddButton({
     Name = "SMILE SANS",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6481.947, 294.972, 7779.182)
-        end
-    end
+    Callback = function() tp(-6481.947, 294.972, 7779.182) end
 })
 
 Gamepass:AddButton({
     Name = "SMILE CHARA",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6481.981, 294.801, 7754.495)
-        end
-    end
+    Callback = function() tp(-6481.981, 294.801, 7754.495) end
 })
 
 -- LOBBY
@@ -102,32 +81,17 @@ local Lobby = Window:MakeTab({
 
 Lobby:AddButton({
     Name = "Lobby",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-2927.306, 137.193, 6017.123)
-        end
-    end
+    Callback = function() tp(-2927.306, 137.193, 6017.123) end
 })
 
 Lobby:AddButton({
     Name = "Character",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6021.257, 323.145, 6562.482)
-        end
-    end
+    Callback = function() tp(-6021.257, 323.145, 6562.482) end
 })
 
 Lobby:AddButton({
     Name = "Gamepass",
-    Callback = function()
-        local c = game.Players.LocalPlayer.Character
-        if c and c:FindFirstChild("HumanoidRootPart") then
-            c.HumanoidRootPart.CFrame = CFrame.new(-6323.915, 293.989, 7777.009)
-        end
-    end
+    Callback = function() tp(-6323.915, 293.989, 7777.009) end
 })
 
 Lobby:AddLabel("These are the lobbies available in the game")
